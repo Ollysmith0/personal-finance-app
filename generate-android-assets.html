@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Play Feature Graphic Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #f0f0f0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        /* Feature Graphic - 1024x500 */
+        .feature-graphic {
+            width: 1024px;
+            height: 500px;
+            background: linear-gradient(135deg, #23267f 0%, #5b61ff 100%);
+            border-radius: 0;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+        
+        .feature-graphic::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 150%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.3;
+        }
+        
+        .feature-content {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 80px;
+            justify-content: space-between;
+        }
+        
+        .feature-left {
+            flex: 1;
+        }
+        
+        .feature-title {
+            font-size: 72px;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        
+        .feature-subtitle {
+            font-size: 32px;
+            color: rgba(255,255,255,0.95);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .feature-description {
+            font-size: 20px;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.4;
+        }
+        
+        .feature-right {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .feature-icon {
+            font-size: 200px;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
+        }
+        
+        /* App Icon - 512x512 */
+        .app-icon {
+            width: 512px;
+            height: 512px;
+            background: linear-gradient(135deg, #23267f 0%, #5b61ff 100%);
+            border-radius: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        
+        .app-icon .emoji {
+            font-size: 220px;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+            margin-bottom: 20px;
+        }
+        
+        .app-icon .text {
+            font-size: 100px;
+            font-weight: 900;
+            color: white;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .instructions {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+        
+        .instructions h2 {
+            color: #23267f;
+            margin-bottom: 20px;
+        }
+        
+        .instructions ol {
+            line-height: 2;
+        }
+        
+        code {
+            background: #f5f5f5;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        
+        .label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="label">Feature Graphic (1024 x 500 px) - Required for Google Play Store</div>
+        <div class="feature-graphic">
+            <div class="feature-content">
+                <div class="feature-left">
+                    <div class="feature-title">Personal Finance</div>
+                    <div class="feature-subtitle">Quản lý tài chính cá nhân</div>
+                    <div class="feature-description">
+                        📊 Thu chi • 📈 Báo cáo • 🔔 Nhắc nhở
+                    </div>
+                </div>
+                <div class="feature-right">
+                    <div class="feature-icon">💰</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="label">App Icon (512 x 512 px) - Required for Google Play Store</div>
+        <div class="app-icon">
+            <div class="emoji">💰</div>
+            <div class="text">PF</div>
+        </div>
+        
+        <div class="instructions">
+            <h2>📸 Hướng dẫn tạo Assets cho Google Play</h2>
+            <ol>
+                <li>Mở file này: <code>open generate-android-assets.html</code></li>
+                <li>Zoom browser đến 100%</li>
+                <li>Chụp Feature Graphic (banner phía trên):
+                    <ul>
+                        <li>Nhấn <code>⌘ + Shift + 4</code></li>
+                        <li>Kéo chọn vùng banner màu xanh (1024x500)</li>
+                        <li>Lưu thành <code>feature-graphic.png</code></li>
+                    </ul>
+                </li>
+                <li>Chụp App Icon (icon vuông phía dưới):
+                    <ul>
+                        <li>Nhấn <code>⌘ + Shift + 4</code></li>
+                        <li>Kéo chọn vùng icon vuông (512x512)</li>
+                        <li>Lưu thành <code>app-icon-512.png</code></li>
+                    </ul>
+                </li>
+                <li>Move vào assets folder:
+                    <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px; margin-top: 10px;">
+mv ~/Desktop/feature-graphic.png ./assets/
+mv ~/Desktop/app-icon-512.png ./assets/
+                    </pre>
+                </li>
+            </ol>
+            
+            <h3 style="margin-top: 30px; color: #23267f;">📱 Screenshots cần chụp</h3>
+            <p>Chạy app trên Android emulator hoặc device:</p>
+            <pre style="background: #f5f5f5; padding: 15px; border-radius: 8px;">
+# Start app
+npm start
+
+# Press 'a' để mở Android emulator
+
+# Navigate và chụp màn hình (Ctrl+S trong emulator):
+1. Home screen với tổng quan
+2. Add transaction screen
+3. Transaction list
+4. Reports với chart
+5. Reminders screen
+
+# Tối thiểu: 2 screenshots
+# Tối đa: 8 screenshots
+# Kích thước: 16:9 hoặc 9:16 aspect ratio
+            </pre>
+        </div>
+    </div>
+</body>
+</html>
