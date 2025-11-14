@@ -1,0 +1,21 @@
+# ❌ Gmail +alias KHÔNG HOẠT ĐỘNG với Play Console!
+# Play Console kiểm tra email phải tồn tại thật
+
+# ✅ GIẢI PHÁP: Tạo email thật hoặc nhờ bạn bè
+
+# Ví dụ danh sách email thật (thay bằng email của bạn):
+# ollysmith0@gmail.com
+# your.friend1@gmail.com
+# your.friend2@gmail.com
+# family.member@gmail.com
+# colleague@gmail.com
+# ... (20 emails)
+
+# HOẶC tạo Gmail mới nhanh:
+# ollysmith.test1@gmail.com (tạo account mới)
+# ollysmith.test2@gmail.com (tạo account mới)
+# ollysmith.test3@gmail.com (tạo account mới)
+# ... (mất ~10 phút cho 5 accounts)
+
+# KHUYẾN NGHỊ: Dùng Facebook post templates để tìm 20 người thật!
+# Xem file: FACEBOOK_POST_TEMPLATES.md
